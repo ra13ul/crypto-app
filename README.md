@@ -17,5 +17,7 @@ In the linux machine it is advisable to create a virtual environment, if we do n
 ### 4. Crontab
 4. We need a new task in the debian cron. We edited the crontab file and added when the script will be executed, in this case at 7, 12, 17 and 22 o´clock every day of the week.
     0 7,12,17,22 * * * ~/python/run_crypto.sh
+5. Added new task, Runs "python/cryptos_por_moneda.sh" every day at 23h to get a new file for each currency.
+    0 23 * * * ~/python/cryptos_por_moneda.sh
 
 The first time we run the script it will create a csv file, with the data of the top ten cryptocurrencies. It will also create a log file. All inside the path; /home/user/python
